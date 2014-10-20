@@ -1,0 +1,13 @@
+
+= simple_form_for(@promocao) do |f|
+    = f.error_notification
+    
+    .form-inputs
+        = f.input :data_inicio, as: :string
+        = f.input :data_fim, as: :string
+        = f.input :abragencia
+        = f.association :empresa, label_method: :nome
+
+    
+    .form-actions
+        = f.button :submit, 'Salvar'

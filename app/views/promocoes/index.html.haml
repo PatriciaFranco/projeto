@@ -1,0 +1,25 @@
+%h1 Listing promocoes
+
+%table
+  %tr
+    %th Data inicio
+    %th Data fim
+    %th Abragencia
+    %th Empresa
+    %th
+    %th
+    %th
+
+  - @promocoes.each do |promocao|
+    %tr
+      %td= promocao.data_inicio
+      %td= promocao.data_fim
+      %td= promocao.abragencia
+      %td= promocao.empresa.nome
+      %td= link_to 'Show', promocao
+      %td= link_to 'Edit', edit_promocao_path(promocao)
+      %td= link_to 'Excluir', promocao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Promocao', new_promocao_path

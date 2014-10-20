@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020213617) do
+ActiveRecord::Schema.define(version: 20141020222434) do
 
   create_table "empresas", force: true do |t|
     t.string   "nome"
@@ -23,5 +23,16 @@ ActiveRecord::Schema.define(version: 20141020213617) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "promocoes", force: true do |t|
+    t.date     "data_inicio"
+    t.date     "data_fim"
+    t.float    "abragencia"
+    t.integer  "empresa_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "promocoes", ["empresa_id"], name: "index_promocoes_on_empresa_id"
 
 end

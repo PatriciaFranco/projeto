@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Data inicio:
+  = @promocao.data_inicio
+%p
+  %b Data fim:
+  = @promocao.data_fim
+%p
+  %b Abragencia:
+  = @promocao.abragencia
+%p
+  %b Empresa:
+  = @promocao.empresa.nome
+
+= link_to 'Edit', edit_promocao_path(@promocao)
+\|
+= link_to 'Back', promocoes_path
