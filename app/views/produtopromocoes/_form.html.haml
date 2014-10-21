@@ -1,0 +1,10 @@
+= simple_form_for(@produtopromocao) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :valor
+    = f.association :empresa, label_method: :nome
+    = f.association :produto, label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'

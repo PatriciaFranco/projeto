@@ -1,0 +1,23 @@
+%h1 Listing produtopromocoes
+
+%table
+  %tr
+    %th Valor
+    %th Empresa
+    %th Produto
+    %th
+    %th
+    %th
+
+  - @produtopromocoes.each do |produtopromocao|
+    %tr
+      %td= produtopromocao.valor
+      %td= produtopromocao.empresa.nome
+      %td= produtopromocao.produto.nome
+      %td= link_to 'Show', produtopromocao
+      %td= link_to 'Edit', edit_produtopromocao_path(produtopromocao)
+      %td= link_to 'Excluir', produtopromocao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Produtopromocao', new_produtopromocao_path
