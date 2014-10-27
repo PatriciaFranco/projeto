@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Projeto</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title>Gerenciamento de Promoções</title>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     <%= csrf_meta_tags %>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    
+
 </head>
 <body>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="http://localhost:3000/" accesskey="1" title="">Home</a></li>
+				<li><a href="empresas" accesskey="2" title="">Empresa</a></li>
+				<li><a href="produtos" accesskey="3" title="">Produto</a></li>
+				<li><a href="promocoes" accesskey="4" title="">Promoção</a></li>
+				<li><a href="produtopromocoes" accesskey="5" title="">Produto Promoção</a></li>
+			</ul>
+		</div>
+		<div id="logo">
+			<h1><a href="#">Gerenciamento de Promoções</a></h1>
+			<span> <a href="http://templated.co" rel="nofollow"></a></span> </div>
+	</div>
+</div>
+
+<div id="wrapper3">
+	<div id="" class="container">
+		<div class="title">
+			<h2></h2>
+			
+			<span class="byline"></span> </div>
+		<div class="column1">
+
+		</div>	
+
+</div>
+
 
 <%= yield %>
 
